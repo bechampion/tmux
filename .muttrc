@@ -1,6 +1,6 @@
 #set imap_user="/\jegarcia"
 #set imap_pass=""
-#set folder="imaps://com:993/"
+#set folder="imaps://usmail..com:993/"
 set folder="/Users/jgarcia/OfflineMail"
 set spoolfile="+INBOX"
 set header_cache = "~/Mail/cache"
@@ -22,7 +22,7 @@ set pager_index_lines=12
 
 set quit=ask-yes
 set timeout=10
-set sidebar_width=27
+set sidebar_width=15
 set sidebar_visible=yes
 set sidebar_delim='|'
 color sidebar_new  yellow default
@@ -58,13 +58,14 @@ color markers    red          default
  mono  header bold             "^(From|Subject|X-Junked-Because|X-Virus-hagbard):"
 #
 # # Colours for items in the index
-color index white       black ~N
+color index white       default ~N
+color index white       default ~O
 color index brightcyan  black  '~f (Alistair.Bird\|Paul\|Jeronimo)
 color index red black "~s \".*CMS.*\"
 color index red         white ~F
 color index black       green ~T
-color index brightwhite black ~D
-color index brightblue   black ~R
+color index brightwhite default ~D
+color index brightblue   default ~R
 mono  index bold              ~N
 mono  index bold              ~F
 mono  index bold              ~T
