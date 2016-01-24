@@ -1,0 +1,20 @@
+[general]
+accounts = ipsoft
+[Account ipsoft]
+localrepository = Local
+remoterepository = Remote
+maxage=2
+[Repository Local]
+type = Maildir
+localfolders = ~/OfflineMail/
+maxage=2
+
+[Repository Remote]
+folderfilter = lambda folder: folder in ['INBOX', 'Sent Items']
+maxage=2
+type = IMAP
+cert_fingerprint=48b7c41f6b47eb841de6f7d747b9dd4dc35e99a0
+remotehost = usmail..com
+remoteuser = \jegarcia
+remotepass = 
+
