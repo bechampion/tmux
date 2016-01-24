@@ -13,8 +13,8 @@ set sort="threads"
 set strict_threads="yes"
 set sort_aux="reverse-last-date-received"
 bind index "*" imap-fetch-mail
-bind pager <up>  previous-line
-bind pager <down>  next-line
+bind pager "]"  previous-line
+bind pager "["  next-line
 set smart_wrap
 bind index "%" sidebar-next
 bind index "$" sidebar-prev
