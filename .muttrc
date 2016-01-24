@@ -1,4 +1,4 @@
-set imap_user="domain/\jegarcia"
+set imap_user="dom/\jegarcia"
 set imap_pass=""
 set folder="imaps://usmail..com:993/"
 set spoolfile="+INBOX"
