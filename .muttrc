@@ -1,6 +1,7 @@
-set imap_user="dom/\jegarcia"
-set imap_pass=""
-set folder="imaps://usmail..com:993/"
+#set imap_user="/\jegarcia"
+#set imap_pass=""
+#set folder="imaps://com:993/"
+set folder="/Users/jgarcia/OfflineMail"
 set spoolfile="+INBOX"
 set header_cache = "~/Mail/cache"
 set message_cachedir = "~/Mail/bodies/cache"
@@ -21,13 +22,13 @@ set pager_index_lines=12
 
 set quit=ask-yes
 set timeout=10
-#set sidebar_width=27
-#set sidebar_visible=yes
-#set sidebar_delim='|'
-#color sidebar_new  yellow default
-#mailboxes "+-- IpSoft------" \
-#          +INBOX \
-#          +Sent\ Items\
+set sidebar_width=27
+set sidebar_visible=yes
+set sidebar_delim='|'
+color sidebar_new  yellow default
+mailboxes "+-- IpSoft------" \
+          +INBOX \
+          +Sent\ Items\
 
 
 color hdrdefault black        cyan
