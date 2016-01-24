@@ -1,0 +1,90 @@
+set imap_user="domain/\jegarcia"
+set imap_pass=""
+set folder="imaps://usmail..com:993/"
+set spoolfile="+INBOX"
+set header_cache = "~/Mail/cache"
+set message_cachedir = "~/Mail/bodies/cache"
+alternative_order text/plain text/html
+auto_view text/html
+set index_format="%4C %Z %[!%b %d %H:%M] %-17.17F (%3l) %s"
+#set sort = reverse-date-received
+set sort="threads"
+set strict_threads="yes"
+set sort_aux="reverse-last-date-received"
+bind index "*" imap-fetch-mail
+bind index "%" sidebar-next
+bind index "$" sidebar-prev
+bind index "^" sidebar-open
+set text_flowed=yes
+set query_command = "~/Mail/addr.sh '%s'" 
+
+set quit=ask-yes
+set timeout=10
+#set sidebar_width=27
+#set sidebar_visible=yes
+#set sidebar_delim='|'
+#color sidebar_new  yellow default
+#mailboxes "+-- IpSoft------" \
+#          +INBOX \
+#          +Sent\ Items\
+
+
+color hdrdefault black        cyan
+color quoted     red          default
+color signature  brightblack  default
+color indicator  white        magenta
+color attachment black        green
+color error      red          default
+color message    white        default
+color search     yellow       magenta
+color status     default      magenta
+color tree       magenta      black
+color normal     white        default
+color tilde      green        default
+color bold       brightyellow default
+color markers    red          default
+
+# Colour definitions when on a mono screen
+ mono bold      bold
+ mono underline underline
+ mono indicator reverse
+#
+# # Colours for items in the reader
+ color header brightwhite cyan "^(From|Subject):"
+ color header red         cyan "^X-Junked-Because: "
+ color header red         cyan "^X-Virus-hagbard: .* FOUND"
+ mono  header bold             "^(From|Subject|X-Junked-Because|X-Virus-hagbard):"
+#
+# # Colours for items in the index
+color index brightgreen black ~N
+color index brightcyan  black  '~f (Alistair.Bird\|Paul\|Jeronimo)
+color index red black "~s \".*CMS.*\"
+color index red         white ~F
+color index black       green ~T
+color index brightwhite black ~D
+color index white       black ~R
+mono  index bold              ~N
+mono  index bold              ~F
+mono  index bold              ~T
+mono  index bold              ~D
+#
+# # Highlights inside the body of a message.
+#
+# # URLs
+ color body blue white "(http|https|ftp|news|telnet|finger)://[^ \">\t\r\n]*"
+ color body yellow default "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+ mono  body bold              "(http|https|ftp|news|telnet|finger)://[^ \">\t\r\n]*"
+ mono  body bold              "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+ mono  body bold              "news:[^ \">\t\r\n]*"
+#
+# # email addresses
+ color body green default "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+ mono  body bold              "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+#
+# # Various smilies and the like
+ color body brightgreen white "<[Gg]>"                                            # <g>
+ color body brightgreen white "<[Bb][Gg]>"                                        # <bg>
+ color body brightgreen white " [;:]-*[)>(<|]"                                    # :-) etc...
+ color body brightblue  white "(^|[[:space:]])\\*[^[:space:]]+\\*([[:space:]]|$)" # *Bold* text.
+ color body brightblue  white "(^|[[:space:]])_[^[:space:]]+_([[:space:]]|$)"     # _Underlined_ text.
+ color body brightblue  white "(^|[[:space:]])/[^[:space:]]+/([[:space:]]|$)"     # /Italic/ text.
