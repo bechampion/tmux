@@ -17,6 +17,7 @@ bind index "$" sidebar-prev
 bind index "^" sidebar-open
 set text_flowed=yes
 set query_command = "~/Mail/addr.sh '%s'" 
+set pager_index_lines=12
 
 set quit=ask-yes
 set timeout=10
@@ -56,13 +57,13 @@ color markers    red          default
  mono  header bold             "^(From|Subject|X-Junked-Because|X-Virus-hagbard):"
 #
 # # Colours for items in the index
-color index brightgreen black ~N
+color index white       black ~N
 color index brightcyan  black  '~f (Alistair.Bird\|Paul\|Jeronimo)
 color index red black "~s \".*CMS.*\"
 color index red         white ~F
 color index black       green ~T
 color index brightwhite black ~D
-color index white       black ~R
+color index brightblue   black ~R
 mono  index bold              ~N
 mono  index bold              ~F
 mono  index bold              ~T
