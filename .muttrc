@@ -56,9 +56,11 @@ color markers    red          default
  mono indicator reverse
 #
 # # Colours for items in the reader
- color header brightwhite cyan "^(From|Subject):"
- color header red         cyan "^X-Junked-Because: "
- color header red         cyan "^X-Virus-hagbard: .* FOUND"
+ color header cyan        default "^(Subject):"
+ color header white default "^(From|To):"
+ color header yellow default "^(Date):"
+ color header cyan default "^X-Junked-Because: "
+ color header red         default "^X-Virus-hagbard: .* FOUND"
  mono  header bold             "^(From|Subject|X-Junked-Because|X-Virus-hagbard):"
 #
 # # Colours for items in the index
