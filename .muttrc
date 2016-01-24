@@ -22,7 +22,8 @@ bind index "^" sidebar-open
 set text_flowed=yes
 set query_command = "~/Mail/addr.sh '%s'" 
 set pager_index_lines=12
-
+bind index "q" noop
+bind index "Q" quit
 set quit=ask-yes
 set timeout=10
 set sidebar_width=15
@@ -77,7 +78,7 @@ mono  index bold              ~D
 # # Highlights inside the body of a message.
 #
 # # URLs
- color body blue white "(http|https|ftp|news|telnet|finger)://[^ \">\t\r\n]*"
+ color body brightred   default "(http|https|ftp|news|telnet|finger)://[^ \">\t\r\n]*"
  color body yellow default "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
  mono  body bold              "(http|https|ftp|news|telnet|finger)://[^ \">\t\r\n]*"
  mono  body bold              "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
