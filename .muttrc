@@ -1,6 +1,7 @@
 #set imap_user="/\jegarcia"
 #set imap_pass=""
 #set folder="imaps://usmail..com:993/"
+set from="Jeronimo Garcia<jeronimo.garcia@ipsoft.com>"
 set folder="/Users/jgarcia/OfflineMail"
 set spoolfile="+INBOX"
 set header_cache = "~/Mail/cache"
@@ -57,7 +58,7 @@ color markers    red          default
 #
 # # Colours for items in the reader
  color header cyan        default "^(Subject):"
- color header white default "^(From|To):"
+ color header white default "^(From|To|CC):"
  color header yellow default "^(Date):"
  color header cyan default "^X-Junked-Because: "
  color header red         default "^X-Virus-hagbard: .* FOUND"
