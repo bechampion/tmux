@@ -1,6 +1,6 @@
-#set imap_user="/\jegarcia"
-#set imap_pass=""
-#set folder="imaps://usmail..com:993/"
+#set imap_user="i/\jegarcia"
+#set imap_pass="V"
+#set folder="imaps://usmail.i.com:993/"
 set folder="/Users/jgarcia/OfflineMail"
 set spoolfile="+INBOX"
 set header_cache = "~/Mail/cache"
@@ -13,6 +13,8 @@ set sort="threads"
 set strict_threads="yes"
 set sort_aux="reverse-last-date-received"
 bind index "*" imap-fetch-mail
+bind pager "["  previous-line
+bind pager "]"  next-line
 bind index "%" sidebar-next
 bind index "$" sidebar-prev
 bind index "^" sidebar-open
@@ -23,7 +25,7 @@ set pager_index_lines=12
 set quit=ask-yes
 set timeout=10
 set sidebar_width=15
-set sidebar_visible=yes
+set sidebar_visible=no
 set sidebar_delim='|'
 color sidebar_new  yellow default
 mailboxes "+-- IpSoft------" \
@@ -40,7 +42,7 @@ color error      red          default
 color message    white        default
 color search     yellow       magenta
 color status     default      magenta
-color tree       magenta      black
+color tree       brightmagenta      default
 color normal     white        default
 color tilde      green        default
 color bold       brightyellow default
