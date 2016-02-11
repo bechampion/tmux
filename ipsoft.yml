@@ -1,0 +1,37 @@
+# ~/.tmuxinator/ipsoft.yml
+
+name: ipsoft
+root: ~/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+windows:
+  - TheSauce:
+      layout: 9c99,211x51,0,0[212x39,0,0{91x39,0,0,3,120x39,92,0,9},212x12,0,40{60x12,0,40,4,90x12,61,40,5,60x12,152,40,6}]
+      panes:
+        - ssh jegarcia@ipmon2
+        - ssh jegarcia@ipmon2
+        - vim ~/Dropbox/ipsoft/Notes/ipsoft
+        - vim ~/Dropbox/ipsoft/thingsto*
+        - date
+  - MoreSauce:
+  - BlahBlah: 
+      
+                 
+
