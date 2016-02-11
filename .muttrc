@@ -22,7 +22,7 @@ bind index "$" sidebar-prev
 bind index "^" sidebar-open
 set text_flowed=yes
 set query_command = "~/Mail/addr.sh '%s'" 
-set pager_index_lines=12
+set pager_index_lines=24
 bind index "q" noop
 bind index "Q" quit
 set quit=ask-yes
