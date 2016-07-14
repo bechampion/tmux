@@ -2,11 +2,6 @@ set nocompatible
 set ic
 syntax on
 set tabstop=4
-" Return to last edit position when opening files (You want this!)
-autocmd BufReadPost *
-      \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
-     \ endif
 filetype plugin indent on
 hi Folded ctermbg=blue ctermfg=white
 set foldmethod=marker
@@ -21,17 +16,21 @@ set number
 set t_Co=256
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+Plugin 'ajf/puppet-vim'
+Plugin 'honza/vim-snippets.git'
+Plugin 'garbas/vim-snipmate.git'
+Plugin 'MarcWeber/vim-addon-mw-utils.git'
+Plugin 'tomtom/tlib_vim.git'
 Plugin 'xolox/vim-notes'
 Plugin 'vim-misc'
 Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
-Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'file:///home/gmarik/path/to/plugin'
+Plugin 'https://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'user/L9', {'name': 'newL9'}
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 call vundle#end()            " required
-let g:notes_directories = ['/Users/jgarcia/Dropbox/ipsoft/Notes']
+let g:notes_directories = ['/home/jegarcia/Dropbox/ipsoft/Notes']
 set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
@@ -42,4 +41,5 @@ hi CursorLine guibg=Grey10
 highlight SpecialKey ctermfg=3
 nnoremap <c-d> "=strftime("%c")<CR>P
 inoremap <c-d> <C-R>=strftime("%c")<CR>
+execute pathogen#infect()
 
