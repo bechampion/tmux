@@ -1,7 +1,10 @@
 set nocompatible
 set ic
 syntax on
-set tabstop=4
+set tabstop=4        
+set softtabstop=4    
+set shiftwidth=4     
+set noexpandtab      
 filetype plugin indent on
 hi Folded ctermbg=blue ctermfg=white
 set foldmethod=marker
