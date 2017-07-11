@@ -19,12 +19,14 @@ set number
 set t_Co=256
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'ajf/puppet-vim'
 Plugin 'honza/vim-snippets.git'
 Plugin 'garbas/vim-snipmate.git'
 Plugin 'MarcWeber/vim-addon-mw-utils.git'
 Plugin 'tomtom/tlib_vim.git'
 Plugin 'xolox/vim-notes'
+Plugin 'scrooloose/nerdtree'
 Plugin 'vim-misc'
 Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
@@ -33,9 +35,9 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'user/L9', {'name': 'newL9'}
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 call vundle#end()            " required
-let g:notes_directories = ['/home/jegarcia/Dropbox/ipsoft/Notes']
 set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
+colorscheme desert
 set termencoding=utf-8
 set laststatus=2
 set cursorline
@@ -44,5 +46,5 @@ hi CursorLine guibg=Grey10
 highlight SpecialKey ctermfg=3
 nnoremap <c-d> "=strftime("%c")<CR>P
 inoremap <c-d> <C-R>=strftime("%c")<CR>
-execute pathogen#infect()
+let mapleader = " "
 
